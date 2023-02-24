@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE language SYSTEM "language.dtd">
-<language name="Hjson" section="Markup" version="1" kateversion="5.0" extensions="*.hjson" mimetype="application/hjson">
+<!DOCTYPE language>
+<language name="Hjson" version="1" kateversion="5.0" section="Markup" extensions="*.hjson" mimetype="application/hjson">
 	<highlighting>
 		<list name="Constants">
 			<item>null</item>
