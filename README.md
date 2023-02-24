@@ -8,3 +8,6 @@ Please let me know if you encounter any errors in the syntax highlighting. I'll 
 ## Highlighting Files
 ### mcfunction
 [Minecraft function files](https://minecraft.fandom.com/wiki/Function_(Java_Edition)), used in [data packs](https://minecraft.fandom.com/wiki/Data_pack). This syntax highlighting file is designed to make function files easier to read, and catch syntax errors before they happen. Not all commands have proper highlighting yet.
+
+### hjson
+See [Hjson, a user interface for JSON](https://hjson.github.io).
