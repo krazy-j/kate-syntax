@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language>
+<language name="Minecraft Function" version="1" kateversion="5.0" section="Scripts" extensions="*.mcfunction">
+	<highlighting>
+		<list name="command">
+			<!--<item>help</item>-->
+			<item>execute</item>
+			<item>datapack</item>
+			<item>reload</item>
+			<item>function</item>
+			<item>schedule</item>
+			<item>data</item>
+			<item>advancement</item>
+			<item>recipe</item>
+			<item>defaultgamemode</item>
+			<item>difficulty</item>
+			<item>gamerule</item>
+			<item>gamemode</item>
+			<item>forceload</item>
+			<item>give</item>
+			<item>clear</item>
+			<item>xp</item>
+			<item>loot</item>
+			<item>enchant</item>
+			<item>particle</item>
+			<item>playsound</item>
+			<item>stopsound</item>
+			<item>say</item>
+			<item>me</item>
+			<item>tm</item>
+			<item>tell</item>
+			<item>msg</item>
+			<item>w</item>
+			<item>tellraw</item>
+			<item>scoreboard</item>
+			<item>trigger</item>
+			<item>bossbar</item>
+			<item>title</item>
+			<item>setblock</item>
+			<item>fill</item>
+			<item>clone</item>
+			<item>setworldspawn</item>
+			<item>spawnpoint</item>
+			<item>spreadplayers</item>
+			<item>spectate</item>
+			<item>summon</item>
+			<item>kill</item>
+			<item>tp</item>
+			<item>effect</item>
+			<item>tag</item>
+			<item>team</item>
+			<item>time</item>
+			<item>weather</item>
+			<item>worldborder</item>
+			<item>seed</item>
+			<!--removed 1.17-->
+			<item>replaceitem</item>
+			<!--1.16-->
+			<item>locatebiome</item>
+			<item>attribute</item>
+			<!--1.17-->
+			<item>item</item>
+			<!--1.18-->
+			<!--removed 1.19-->
+			<item>placefeature</item>
+			<!--1.19-->
+			<item>place</item>
+			<item>locate</item>
+		</list>
+		<list name="gamerule">
+			<item>maxCommandChainLength</item>
+			<item>commandBlockOutput</item>
+			<item>sendCommandFeedback</item>
+			<item>logAdminCommands</item>
+			
+			<item>showDeathMessages</item>
+			<item>announceAdvancements</item>
+			<item>reducedDebugInfo</item>
+			<item>globalSoundEvents</item>
+			
+			<item>doDaylightCycle</item>
+			<item>doWeatherCycle</item>
+			<item>doFireTick</item>
+			<item>randomTickSpeed</item>
+			<item>lavaSourceConversion</item>
+			<item>waterSourceConversion</item>
+			<item>snowAccumulationHeight</item>
+			
+			<item>doMobSpawning</item>
+			<item>doPatrolSpawning</item>
+			<item>doTraderSpawning</item>
+			<item>doWardenSpawning</item>
+			<item>disableRaids</item>
+			<item>doInsomnia</item>
+			<item>maxEntityCramming</item>
+			<item>mobGriefing</item>
+			
+			<item>blockExplosionDropDecay</item>
+			<item>mobExplosionDropDecay</item>
+			<item>tntExplosionDropDecay</item>
+			<item>doTileDrops</item>
+			<item>doEntityDrops</item>
+			<item>doMobLoot</item>
+			
+			<item>spawnRadius</item>
+			<item>naturalRegeneration</item>
+			<item>drowningDamage</item>
+			<item>fallDamage</item>
+			<item>fireDamage</item>
+			<item>freezeDamage</item>
+			<item>keepInventory</item>
+			<item>doImmediateRespawn</item>
+			<item>forgiveDeadPlayers</item>
+			<item>universalAnger</item>
+			
+			<item>playersSleepingPercentage</item>
+			<item>doLimitedCrafting</item>
+			<item>spectatorsGenerateChunks</item>
+			<item>disableElytraMovementCheck</item>
+		</list>
+		<list name="boolean gamerule">
+			<item>commandBlockOutput</item>
+			<item>sendCommandFeedback</item>
+			<item>logAdminCommands</item>
+			
+			<item>showDeathMessages</item>
+			<item>announceAdvancements</item>
+			<item>reducedDebugInfo</item>
+			<item>globalSoundEvents</item>
+			
+			<item>doDaylightCycle</item>
+			<item>doWeatherCycle</item>
+			<item>doFireTick</item>
+			<item>lavaSourceConversion</item>
+			<item>waterSourceConversion</item>
+			
+			<item>doMobSpawning</item>
+			<item>doPatrolSpawning</item>
+			<item>doTraderSpawning</item>
+			<item>doWardenSpawning</item>
+			<item>disableRaids</item>
+			<item>doInsomnia</item>
+			<item>mobGriefing</item>
+			
+			<item>blockExplosionDropDecay</item>
+			<item>mobExplosionDropDecay</item>
+			<item>tntExplosionDropDecay</item>
+			<item>doTileDrops</item>
+			<item>doEntityDrops</item>
+			<item>doMobLoot</item>
+			
+			<item>naturalRegeneration</item>
+			<item>drowningDamage</item>
+			<item>fallDamage</item>
+			<item>fireDamage</item>
+			<item>freezeDamage</item>
+			<item>keepInventory</item>
+			<item>doImmediateRespawn</item>
+			<item>forgiveDeadPlayers</item>
+			<item>universalAnger</item>
+			
+			<item>doLimitedCrafting</item>
+			<item>spectatorsGenerateChunks</item>
+			<item>disableElytraMovementCheck</item>
+		</list>
+		<list name="integer gamerule">
+			<item>maxCommandChainLength</item>
+			<item>randomTickSpeed</item>
+			<item>snowAccumulationHeight</item>
+			<item>maxEntityCramming</item>
+			<item>spawnRadius</item>
+			<item>playersSleepingPercentage</item>
+		</list>
+		<list name="gamemode">
+			<item>creative</item>
+			<item>survival</item>
+			<item>adventure</item>
+			<item>spectator</item>
+		</list>
+		<list name="difficulty">
+			<item>peaceful</item>
+			<item>easy</item>
+			<item>normal</item>
+			<item>hard</item>
+		</list>
+		<list name="status effect">
+			<item>speed</item>
+			<item>slowness</item>
+			<item>haste</item>
+			<item>mining_fatigue</item>
+			<item>strength</item>
+			<item>instant_health</item>
+			<item>instant_damage</item>
+			<item>jump_boost</item>
+			<item>nausea</item>
+			<item>regeneration</item>
+			<item>resistance</item>
+			<item>fire_resistance</item>
+			<item>water_breathing</item>
+			<item>invisibility</item>
+			<item>blindness</item>
+			<item>night_vision</item>
+			<item>hunger</item>
+			<item>weakness</item>
+			<item>poison</item>
+			<item>wither</item>
+			<item>health_boost</item>
+			<item>absorption</item>
+			<item>saturation</item>
+			<!--1.9-->
+			<item>glowing</item>
+			<item>levitation</item>
+			<item>luck</item>
+			<item>unluck</item>
+			<!--1.13-->
+			<item>slow_falling</item>
+			<item>conduit_power</item>
+			<item>dolphins_grace</item>
+			<!--1.14-->
+			<item>bad_omen</item>
+			<item>hero_of_the_village</item>
+			<!--1.19-->
+			<item>darkness</item>
+		</list>
+		<list name="data type">
+			<item>byte</item>
+			<item>short</item>
+			<item>int</item>
+			<item>long</item>
+			<item>double</item>
+			<item>float</item>
+		</list>
+		<list name="operator">
+			<item>+</item>
+			<item>-</item>
+			<item>*</item>
+			<item>/</item>
+			<item>&lt;</item>
+			<item>=</item>
+			<item>&gt;</item>
+			<item>!</item>
+			<item>:</item>
+			<item>~</item>
+			<item>^</item>
+		</list>
+		<!--list name="block state">
+			<item>axis</item>
+			<item>attachment</item>
+			<item>face</item>
+			<item>facing</item>
+			<item>half</item>
+			<item>hinge</item>
+			<item>rotation</item>
+			<item>orientation</item>
+			<item>down</item>
+			<item>up</item>
+			<item>north</item>
+			<item>south</item>
+			<item>east</item>
+			<item>west</item>
+			<item>open</item>
+			
+			<item>age</item>
+			<item>bites</item>
+			<item>conditional</item>
+			<item>distance</item>
+			<item>drag</item>
+			<item>enabled</item>
+			<item>extended</item>
+			<item>eye</item>
+			<item>hanging</item>
+			<item>has_book</item>
+			<item>has_bottle_0</item>
+			<item>has_bottle_1</item>
+			<item>has_bottle_2</item>
+			<item>has_record</item>
+			<item>honey_level</item>
+			<item>in_wall</item>
+			<item>instrument</item>
+			<item>inverted</item>
+			<item>leaves</item>
+			<item>level</item>
+			<item>lit</item>
+			<item>locked</item>
+			<item>mode</item>
+			<item>moisture</item>
+			<item>note</item>
+			<item>occupied</item>
+			<item>part</item>
+			<item>persistent</item>
+			<item>power</item>
+			<item>powered</item>
+			<item>signal_fire</item>
+			<item>snowy</item>
+			<item>stage</item>
+			<item>triggered</item>
+			<item>type</item>
+			<item>waterlogged</item>
+		</list-->
+		<list name="selector argument">
+			<item>advancements</item>
+			<item>distance</item>
+			<item>gamemode</item>
+			<item>level</item>
+			<item>limit</item>
+			<item>name</item>
+			<item>nbt</item>
+			<item>predicate</item>
+			<item>scores</item>
+			<item>sort</item>
+			<item>tag</item>
+			<item>team</item>
+			<item>type</item>
+			<item>x</item>
+			<item>dx</item>
+			<item>y</item>
+			<item>dy</item>
+			<item>z</item>
+			<item>dz</item>
+			<item>x_rotation</item>
+			<item>y_rotation</item>
+		</list>
+		<list name="execute subcommand">
+			<item>align</item>
+			<item>anchored</item>
+			<item>as</item>
+			<item>at</item>
+			<item>facing</item>
+			<item>if</item>
+			<item>in</item>
+			<item>positioned</item>
+			<item>rotated</item>
+			<item>store</item>
+			<item>unless</item>
+			<item>run</item>
+			<!--1.19.4-->
+			<item>on</item>
+		</list>
+		<list name="direction">
+			<item>up</item>
+			<item>down</item>
+			<item>top</item>
+			<item>bottom</item>
+			<item>north</item>
+			<item>south</item>
+			<item>east</item>
+			<item>west</item>
+		</list>
+		<contexts>
+			<context name="Begin" attribute="Error" lineEndContext="#pop">
+				<DetectSpaces attribute="Normal"/>
+				<IncludeRules context="Global"/>
+				<DetectChar attribute="Comment" context="Comment" char="#"/>
+				<WordDetect attribute="Command" context="#pop!Execute Command" String="execute "/>
+				<!--zero-argument commands-->
+				<WordDetect attribute="Command" context="#pop!End" String="seed"/>
+				<WordDetect attribute="Command" context="#pop!End" String="reload"/>
+				<!--misc-->
+				<WordDetect attribute="Command" context="#pop!Function Command" String="function "/>
+				<WordDetect attribute="Command" context="#pop!Schedule Command" String="schedule "/>
+				<WordDetect attribute="Command" context="#pop!Gamerule Command" String="gamerule "/>
+				<WordDetect attribute="Command" context="#pop!Difficulty Command" String="difficulty "/>
+				<WordDetect attribute="Command" context="#pop!Default Gamemode Command" String="defaultgamemode "/>
+				<WordDetect attribute="Command" context="#pop!Entity Selector at End" String="kill "/>
+				<!--player-specific commands-->
+				<WordDetect attribute="Command" context="#pop!Gamemode Command" String="gamemode "/>
+				<WordDetect attribute="Command" context="#pop!Give Command" String="give "/>
+				<WordDetect attribute="Command" context="#pop!Clear Command" String="clear "/>
+				<WordDetect attribute="Command" context="#pop!Effect Command" String="effect "/>
+				<WordDetect attribute="Command" context="#pop!Advancement Command" String="advancement "/>
+				<!--block commands-->
+				<WordDetect attribute="Command" context="#pop!Setblock Command" String="setblock "/>
+				<WordDetect attribute="Command" context="#pop!Fill Command" String="fill "/>
+				<WordDetect attribute="Command" context="#pop!Clone Command" String="clone "/>
+				<!--message related commands-->
+				<WordDetect attribute="Command" context="#pop!Text" String="say"/>
+				<WordDetect attribute="Command" context="#pop!Text" String="me"/>
+				<WordDetect attribute="Command" context="#pop!Text" String="tm"/>
+				<WordDetect attribute="Command" context="#pop!Text" String="teammsg"/>
+				<WordDetect attribute="Command" context="#pop!Whisper Command" String="tell"/>
+				<WordDetect attribute="Command" context="#pop!Whisper Command" String="msg"/>
+				<WordDetect attribute="Command" context="#pop!Whisper Command" String="w"/>
+				<WordDetect attribute="Command" context="#pop!Tellraw Command" String="tellraw "/>
+				
+				<keyword attribute="Command" context="#pop!Generic Command" String="command"/>
+			</context>
+			<context name="Comment" attribute="Comment" lineEndContext="#pop"/>
+			<context name="Text" lineEndContext="#pop"/>
+			<context name="Error" attribute="Error" lineEndContext="#pop"/>
+			<context name="End" attribute="Error" lineEndContext="#pop"/>
+			
+			<context name="Global" lineEndContext="#pop">
+				<RegExpr attribute="Error" String="  +| $"/>
+			</context>
+			
+			<context name="Common" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="True" String="true"/>
+				<WordDetect attribute="False" String="false"/>
+				<DetectChar attribute="String" context="String Single" char="'"/>
+				<DetectChar attribute="String" context="String Double" char="&quot;"/>
+				<RegExpr context="Coordinate 3" lookAhead="true" String="(?:~?-?\d+\.?\d*|~?-?\.\d+|~) (?:~?-?\d+\.?\d*|~?-?\.\d+|~) (?:~?-?\d+\.?\d*|~?-?\.\d+|~)"/>
+				<RegExpr context="Local Coordinate 3" lookAhead="true" String="\^(?:-?\d+\.?\d*|-?\.\d+)? \^(?:-?\d+\.?\d*|-?\.\d+)? \^(?:-?\d+\.?\d*|-?\.\d+)?"/>
+				<RegExpr attribute="Range" String="(?:-?\d*\.?\d+)?\.\.-?(?:\d+\.|\.?\d)\d*|-?\d*\.?\d+\.\."/>
+				<RegExpr attribute="Float" context="Data Type Suffix" String="-?\d+\.\d*|-?\.\d+"/>
+				<RegExpr attribute="Integer" context="Data Type Suffix" String="-?\d+"/>
+				<keyword attribute="Operator" String="operator"/>
+				<StringDetect context="JSON Text" lookAhead="true" String="[&quot;"/>
+				<DetectChar attribute="Bracket" context="Array" char="["/>
+				<StringDetect context="JSON Text" lookAhead="true" String="{&quot;"/>
+				<DetectChar attribute="Brace" context="Dictionary" char="{"/>
+				<AnyChar attribute="Error" String="]}"/>
+			</context>
+			
+			<context name="Generic Command" lineEndContext="#pop">
+				<IncludeRules context="Common"/>
+				<RegExpr attribute="Entity Selector" context="Entity Selector Argument List" String="@[aeprs]\["/>
+				<RegExpr attribute="Entity Selector" context="Argument End" String="@[aeprs]"/>
+				<DetectChar attribute="Error" char="@"/>
+				<keyword attribute="Data Type" String="data type"/>
+			</context>
+			
+			
+			<context name="String Single" attribute="String" lineEndContext="#pop">
+				<HlCStringChar attribute="Special Character"/>
+				<DetectChar attribute="String" context="#pop" char="'"/>
+			</context>
+			<context name="String Double" attribute="String" lineEndContext="#pop">
+				<HlCStringChar attribute="Special Character"/>
+				<DetectChar attribute="String" context="#pop" char="&quot;"/>
+			</context>
+			
+			<context name="Array" lineEndContext="#pop">
+				<DetectChar attribute="Error" char=" "/>
+				<DetectChar attribute="List Separator" char=","/>
+				<DetectChar attribute="Bracket" context="#pop" char="]"/>
+				<IncludeRules context="Common"/>
+			</context>
+			<context name="Dictionary" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Brace" context="#pop" char="}"/>
+				<RegExpr context="Dictionary Key" lookAhead="true" String="(?:\w+|&quot;.+&quot;)[:=]"/>
+			</context>
+			
+			<context name="Dictionary Key" lineEndContext="#pop">
+				<DetectChar attribute="Brace" context="#pop!Dictionary Value" char=":"/>
+				<DetectChar attribute="Brace" context="#pop!Dictionary Value" char="="/>
+				<IncludeRules context="Common"/>
+			</context>
+			
+			<context name="Dictionary Value" lineEndContext="#pop">
+				<DetectChar attribute="Brace" context="#pop#pop" char="}"/>
+				<AnyChar attribute="Error" String=" :="/>
+				<DetectChar attribute="List Separator" context="#pop" char=","/>
+				<IncludeRules context="Common"/>
+			</context>
+			
+			<context name="JSON Array" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Array##JSON"/>
+			</context>
+			<context name="JSON Dictionary" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Pair##JSON"/>
+			</context>
+			
+			<!-- argument validation/highlighting rule sets -->
+			<context name="Argument End" attribute="Error" lineEndContext="#pop">
+				<StringDetect context="Error" String="  "/>
+				<DetectChar context="#pop" lookAhead="true" char=" "/>
+			</context>
+			
+			<context name="Boolean">
+				<WordDetect attribute="True" context="Argument End" String="true"/>
+				<WordDetect attribute="False" context="Argument End" String="false"/>
+			</context>
+			<context name="Integer">
+				<RegExpr attribute="Integer" context="Argument End" String="-?\d+"/>
+			</context>
+			<context name="Float">
+				<RegExpr attribute="Float" context="Argument End" String="-?\d+\.?\d*|-?\.\d+"/>
+			</context>
+			<context name="Integer Range">
+				<RegExpr attribute="Range" context="Argument End" String="-?\d+\.\.(?:-?\d+)?|\.\.-?\d+"/>
+			</context>
+			<context name="Float Range">
+				<RegExpr attribute="Range" context="Argument End" String="(?:-?\d*\.?\d+)?\.\.-?(?:\d+\.|\.?\d)\d*|-?\d*\.?\d+\.\."/>
+			</context>
+			
+			<context name="Absolute Coordinate">
+				<RegExpr attribute="Coordinate" context="Argument End" String="-?\d+\.?\d*|-?\.\d+"/>
+			</context>
+			<context name="Relative Coordinate">
+				<RegExpr attribute="Relative Coordinate" context="Argument End" String="~-?(?:\d+\.|\.?\d)?\d*"/>
+			</context>
+			<context name="Local Coordinate">
+				<RegExpr attribute="Local Coordinate" context="Argument End" String="\^-?(?:\d+\.?|\^\.\d)?\d*"/>
+			</context>
+			<context name="Block Coordinate">
+				<RegExpr attribute="Coordinate" context="Argument End" String="-?\d+"/>
+				<IncludeRules context="Relative Coordinate"/>
+			</context>
+			
+			<context name="Data Type Suffix" fallthroughContext="#pop">
+				<AnyChar attribute="Data Type" context="#pop" String="bsildf"/>
+			</context>
+			
+			<context name="Boolean at End" attribute="Error" lineEndContext="#pop">
+				<WordDetect attribute="True" context="End" String="true"/>
+				<WordDetect attribute="False" context="End" String="false"/>
+			</context>
+			<context name="Integer at End" attribute="Error" lineEndContext="#pop">
+				<RegExpr attribute="Integer" context="End" String="-?\d+"/>
+			</context>
+			
+			<context name="JSON Text" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Bracket" context="#pop!JSON Array" char="["/>
+				<DetectChar attribute="Brace" context="#pop!JSON Dictionary" char="{"/>
+				<DetectChar attribute="String" context="#pop!String Double" char="&quot;"/>
+			</context>
+			
+			<context name="Position">
+				<IncludeRules context="Local Position"/>
+				<AnyChar context="Coordinate 3" lookAhead="true" String="~-.0123456789"/>
+			</context>
+			<context name="Position Popback" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Position"/>
+				<DetectChar attribute="Normal" context="#pop" char=" "/>
+			</context>
+			<context name="Coordinate 1" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Absolute Coordinate"/>
+				<IncludeRules context="Relative Coordinate"/>
+				<DetectChar context="#pop" lookAhead="true" char=" "/>
+			</context>
+			<context name="Coordinate 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Absolute Coordinate"/>
+				<IncludeRules context="Relative Coordinate"/>
+				<DetectChar attribute="Normal" context="#pop!Coordinate 1" char=" "/>
+			</context>
+			<context name="Coordinate 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Absolute Coordinate"/>
+				<IncludeRules context="Relative Coordinate"/>
+				<DetectChar attribute="Normal" context="#pop!Coordinate 2" char=" "/>
+			</context>
+			
+			<context name="Local Position">
+				<DetectChar context="Local Coordinate 3" lookAhead="true" char="^"/>
+			</context>
+			<context name="Local Coordinate 1" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Local Coordinate"/>
+				<DetectChar context="#pop" lookAhead="true" char=" "/>
+			</context>
+			<context name="Local Coordinate 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Local Coordinate"/>
+				<DetectChar attribute="Normal" context="#pop!Local Coordinate 1" char=" "/>
+			</context>
+			<context name="Local Coordinate 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Local Coordinate"/>
+				<DetectChar attribute="Normal" context="#pop!Local Coordinate 2" char=" "/>
+			</context>
+			
+			<context name="Block Position">
+				<IncludeRules context="Local Position"/>
+				<AnyChar context="Block Coordinate 3" lookAhead="true" String="~-0123456789"/>
+			</context>
+			<context name="Block Coordinate 1" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Block Coordinate"/>
+				<DetectChar context="#pop" lookAhead="true" char=" "/>
+			</context>
+			<context name="Block Coordinate 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Block Coordinate"/>
+				<DetectChar attribute="Normal" context="#pop!Block Coordinate 1" char=" "/>
+			</context>
+			<context name="Block Coordinate 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Block Coordinate"/>
+				<DetectChar attribute="Normal" context="#pop!Block Coordinate 2" char=" "/>
+			</context>
+			
+			<context name="Entity Selector">
+				<RegExpr attribute="Entity Selector" context="Entity Selector Argument List" String="@[eaprs]\["/>
+				<RegExpr attribute="Entity Selector" context="Argument End" String="@[eaprs]|[\w\.\+-]{1,16}"/>
+			</context>
+			<context name="Entity Selector Argument List" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Entity Selector" context="#pop!Argument End" char="]"/>
+				<RegExpr context="Entity Selector Argument" lookAhead="true" String="[a-z_]+=[^,=\]]*"/>
+			</context>
+			<context name="Entity Selector Argument" lineEndContext="#pop">
+				<keyword attribute="Entity Selector Argument" String="selector argument"/>
+				<DetectChar attribute="Operator" char="="/>
+				<DetectChar attribute="List Separator" context="#pop" char=","/>
+				<DetectChar attribute="Entity Selector" context="#pop#pop!Argument End" char="]"/>
+				<IncludeRules context="Common"/>
+			</context>
+			
+			<context name="Entity Selector Popback" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop" char=" "/>
+			</context>
+			<context name="Entity Selector at End" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar context="End" char=" "/>
+			</context>
+			
+			<context name="Item">
+				<RegExpr context="Item Namespace Highlight" lookAhead="true" String="(\w+):\w+"/>
+				<RegExpr attribute="Item" context="Item Argument End" String="\w+"/>
+			</context>
+			<context name="Item Namespace Highlight" lineEndContext="#pop">
+				<DetectChar attribute="Tag" char="#"/>
+				<StringDetect attribute="Namespace" String="%1" dynamic="true"/>
+				<DetectChar context="#pop!Item Highlight" char=":"/>
+			</context>
+			<context name="Item Highlight" lineEndContext="#pop">
+				<DetectChar attribute="Tag" char="#"/>
+				<RegExpr attribute="Item" context="#pop!Item Argument End" String="\w+"/>
+			</context>
+			<context name="Item Tag">
+				<RegExpr context="Item Namespace Highlight" lookAhead="true" String="#(\w+):\w+"/>
+				<RegExpr context="Item Highlight" lookAhead="true" String="#\w+"/>
+			</context>
+			<context name="Item Argument End" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Brace" context="Dictionary" char="{"/>
+				<IncludeRules context="Argument End"/>
+			</context>
+			
+			<context name="Block">
+				<RegExpr context="Block Namespace Highlight" lookAhead="true" String="(\w+):\w+"/>
+				<RegExpr attribute="Block" context="Block Argument End" String="\w+"/>
+			</context>
+			<context name="Block Namespace Highlight" lineEndContext="#pop">
+				<DetectChar attribute="Tag" char="#"/>
+				<StringDetect attribute="Namespace" String="%1" dynamic="true"/>
+				<DetectChar context="#pop!Block Highlight" char=":"/>
+			</context>
+			<context name="Block Highlight" lineEndContext="#pop">
+				<DetectChar attribute="Tag" char="#"/>
+				<RegExpr attribute="Block" context="#pop!Block Argument End" String="\w+"/>
+			</context>
+			<context name="Block Tag">
+				<RegExpr context="Block Namespace Highlight" lookAhead="true" String="#(\w+):\w+"/>
+				<RegExpr context="Block Highlight" lookAhead="true" String="#\w+"/>
+			</context>
+			<context name="Block Argument End" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Block" context="Block State List" char="["/>
+				<DetectChar attribute="Brace" context="Dictionary" char="{"/>
+				<IncludeRules context="Argument End"/>
+			</context>
+			<context name="Block State List" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Block" context="#pop" char="]"/>
+				<RegExpr context="Block State" lookAhead="true" String="([a-z_]+)=(?:[^,=\]]+)"/>
+			</context>
+			<context name="Block State" lineEndContext="#pop">
+				<StringDetect attribute="Block State" String="%1" dynamic="true"/>
+				<DetectChar attribute="Operator" char="="/>
+				<DetectChar attribute="List Separator" context="#pop" char=","/>
+				<DetectChar attribute="Block" context="#pop#pop" char="]"/>
+				<WordDetect attribute="True" String="true"/>
+				<WordDetect attribute="False" String="false"/>
+				<keyword attribute="Direction" String="direction"/>
+				<DetectChar attribute="X" char="x"/>
+				<DetectChar attribute="Y" char="y"/>
+				<DetectChar attribute="Z" char="z"/>
+			</context>
+			
+			<context name="Entity">
+				<RegExpr context="Entity Highlight" lookAhead="true" String="(\w+):(\w+)"/>
+				<keyword attribute="Entity" context="Argument End" String="\w+"/>
+			</context>
+			<context name="Entity Highlight" lineEndContext="#pop">
+				<StringDetect attribute="Namespace" String="%1" dynamic="true"/>
+				<StringDetect attribute="Entity" context="#pop!Argument End" String="%2" dynamic="true"/>
+			</context>
+			
+			<context name="Status Effect">
+				<RegExpr context="Status Effect Highlight" lookAhead="true" String="(\w+):(\w+)"/>
+				<keyword attribute="Status Effect" context="Argument End" String="status effect"/>
+			</context>
+			<context name="Status Effect Highlight" lineEndContext="#pop">
+				<StringDetect attribute="Namespace" String="%1" dynamic="true"/>
+				<StringDetect attribute="Status Effect" context="#pop!Argument End" String="%2" dynamic="true"/>
+			</context>
+			
+			<context name="Resource Location">
+				<RegExpr context="Resource Location Namespace Highlight" lookAhead="true" String="(\w+):\w+(?:/\w+)*"/>
+				<RegExpr context="Resource Location Path Highlight" lookAhead="true" String="\w+(?:/\w+)*"/>
+			</context>
+			<context name="Resource Location Tag">
+				<RegExpr context="Resource Location Namespace Highlight" lookAhead="true" String="#(\w+):\w+(?:/\w+)*"/>
+				<RegExpr context="Resource Location Path Highlight" lookAhead="true" String="#\w+(?:/\w+)*"/>
+			</context>
+			<context name="Resource Location Namespace Highlight" lineEndContext="#pop">
+				<DetectChar attribute="Tag" char="#"/>
+				<StringDetect attribute="Namespace" String="%1" dynamic="true"/>
+				<DetectChar attribute="Normal" context="#pop!Resource Location Path Highlight" char=":"/>
+			</context>
+			<context name="Resource Location Path Highlight" lineEndContext="#pop">
+				<DetectChar attribute="Tag" char="#"/>
+				<RegExpr attribute="Path" String="[0-9a-z_.-]+"/>
+				<DetectChar attribute="Normal" char="/"/>
+				<DetectChar context="#pop" lookAhead="true" char=" "/>
+			</context>
+			<context name="Function" lineEndContext="#pop">
+				<RegExpr context="Resource Location Namespace Highlight" lookAhead="true" String="#?(\w+):\w+(?:/\w+)*"/>
+			</context>
+			
+			<!-- commands -->
+			<context name="Execute Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Execute Subcommand" context="Execute Anchored" String="anchored "/>
+				<WordDetect attribute="Execute Subcommand" context="Execute Align" String="align "/>
+				<WordDetect attribute="Execute Subcommand" context="Entity Selector Popback" String="as "/>
+				<WordDetect attribute="Execute Subcommand" context="Entity Selector Popback" String="at "/>
+				<WordDetect attribute="Execute Subcommand" context="Entity Selector Popback" String="positioned as "/>
+				<WordDetect attribute="Execute Subcommand" context="Position Popback" String="positioned "/>
+				<WordDetect attribute="Execute Subcommand" context="Entity Selector Popback" String="rotated as "/>
+				<WordDetect attribute="Execute Subcommand" context="#pop!Begin" String="run "/>
+				<keyword attribute="Execute Subcommand" context="Execute Generic" String="execute subcommand"/>
+			</context>
+			<context name="Execute Generic" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<keyword context="#pop" lookAhead="true" String="execute subcommand"/>
+				<IncludeRules context="Generic Command"/>
+			</context>
+			<context name="Execute Align" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<DetectChar attribute="X" char="x"/>
+				<DetectChar attribute="Y" char="y"/>
+				<DetectChar attribute="Z" char="z"/>
+				<DetectChar attribute="Normal" context="#pop" char=" "/>
+			</context>
+			<context name="Execute Anchored" attribute="Error" lineEndContext="#pop">
+				<WordDetect attribute="Normal" context="#pop" String="eyes "/>
+				<WordDetect attribute="Normal" context="#pop" String="feet "/>
+			</context>
+			
+			<context name="Function Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Function"/>
+				<DetectChar context="End" char=" "/>
+			</context>
+			
+			<context name="Schedule Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="#pop!Schedule Command 2" String="function "/>
+				<WordDetect attribute="Normal" context="#pop!Function Command" String="clear "/>
+			</context>
+			<context name="Schedule Command 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Function"/>
+				<DetectChar attribute="Normal" context="#pop!Schedule Command 3" char=" "/>
+			</context>
+			<context name="Schedule Command 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<RegExpr attribute="Integer" String="\d+(?:\.\d*)?[tsd]?"/>
+				<DetectChar attribute="Normal" context="#pop!Schedule Command 4" char=" "/>
+			</context>
+			<context name="Schedule Command 4" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="End" String="append"/>
+				<WordDetect attribute="Normal" context="End" String="replace"/>
+			</context>
+			
+			<context name="Difficulty Command" attribute="Error" lineEndContext="#pop">
+				<keyword attribute="Normal" context="End" String="difficulty"/>
+			</context>
+			
+			<context name="Default Gamemode Command" attribute="Error" lineEndContext="#pop">
+				<keyword attribute="Game Mode" context="End" String="gamemode"/>
+			</context>
+			
+			<context name="Gamemode Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<keyword attribute="Game Mode" context="Argument End" String="gamemode"/>
+				<DetectChar attribute="Normal" context="Entity Selector at End" char=" "/>
+			</context>
+			
+			<context name="Gamerule Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<keyword attribute="Game Rule" context="Gamerule Command Boolean" String="boolean gamerule"/>
+				<keyword attribute="Game Rule" context="Gamerule Command Integer" String="integer gamerule"/>
+			</context>
+			<context name="Gamerule Command Boolean" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<DetectChar attribute="Normal" context="Boolean at End" char=" "/>
+			</context>
+			<context name="Gamerule Command Integer" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<DetectChar attribute="Normal" context="Integer at End" char=" "/>
+			</context>
+			
+			<context name="Setblock Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block Position"/>
+				<DetectChar attribute="Normal" context="#pop!Setblock Command 2" char=" "/>
+			</context>
+			<context name="Setblock Command 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block"/>
+				<DetectChar attribute="Normal" context="#pop!Setblock Command 3" char=" "/>
+			</context>
+			<context name="Setblock Command 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="End" String="destroy"/>
+				<WordDetect attribute="Normal" context="End" String="keep"/>
+				<WordDetect attribute="Normal" context="End" String="replace"/>
+			</context>
+			
+			<context name="Fill Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block Position"/>
+				<DetectChar attribute="Normal" context="#pop!Fill Command 2" char=" "/>
+			</context>
+			<context name="Fill Command 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block Position"/>
+				<DetectChar attribute="Normal" context="#pop!Fill Command 3" char=" "/>
+			</context>
+			<context name="Fill Command 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block"/>
+				<DetectChar attribute="Normal" context="#pop!Fill Command 4" char=" "/>
+			</context>
+			<context name="Fill Command 4" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="End" String="destroy"/>
+				<WordDetect attribute="Normal" context="End" String="hollow"/>
+				<WordDetect attribute="Normal" context="End" String="outline"/>
+				<WordDetect attribute="Normal" context="End" String="keep"/>
+				<WordDetect attribute="Normal" context="Argument End" String="replace"/>
+				<DetectChar attribute="Normal" context="#pop!Fill Command 5" char=" "/>
+			</context>
+			<context name="Fill Command 5" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block"/>
+				<IncludeRules context="Block Tag"/>
+				<DetectChar context="End" char=" "/>
+			</context>
+			
+			<context name="Clone Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block Position"/>
+				<DetectChar attribute="Normal" context="#pop!Clone Command 2" char=" "/>
+			</context>
+			<context name="Clone Command 2" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block Position"/>
+				<DetectChar attribute="Normal" context="#pop!Clone Command 3" char=" "/>
+			</context>
+			<context name="Clone Command 3" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block Position"/>
+				<DetectChar attribute="Normal" context="#pop!Clone Command 4" char=" "/>
+			</context>
+			<context name="Clone Command 4" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="#pop!Clone Command 5" String="filtered "/>
+				<WordDetect attribute="Normal" context="Argument End" String="replace"/>
+				<WordDetect attribute="Normal" context="Argument End" String="masked"/>
+				<DetectChar attribute="Normal" context="#pop!Clone Command 6" char=" "/>
+			</context>
+			<context name="Clone Command 5" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Block"/>
+				<IncludeRules context="Block Tag"/>
+				<DetectChar attribute="Normal" context="#pop!Clone Command 6" char=" "/>
+			</context>
+			<context name="Clone Command 6" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="End" String="force"/>
+				<WordDetect attribute="Normal" context="End" String="move"/>
+				<WordDetect attribute="Normal" context="End" String="normal"/>
+			</context>
+			
+			<context name="Give Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!Give Command Item" char=" "/>
+			</context>
+			<context name="Give Command Item" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Item"/>
+				<DetectChar attribute="Normal" context="#pop!Give Command Count" char=" "/>
+			</context>
+			<context name="Give Command Count" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<Int attribute="Integer" context="End"/>
+			</context>
+			
+			<context name="Clear Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!Clear Command Item" char=" "/>
+			</context>
+			<context name="Clear Command Item" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Item"/>
+				<IncludeRules context="Item Tag"/>
+				<DetectChar attribute="Normal" context="#pop!Clear Command Count" char=" "/>
+			</context>
+			<context name="Clear Command Count" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<Int attribute="Integer" context="End"/>
+			</context>
+			
+			<context name="Effect Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="#pop!Effect Give Command Selector" String="give "/>
+				<WordDetect attribute="Normal" context="#pop!Effect Clear Command Selector" String="clear "/>
+				<WordDetect attribute="Normal" context="End" String="clear"/>
+			</context>
+			<context name="Effect Give Command Selector" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!Effect Give Command Effect" char=" "/>
+			</context>
+			<context name="Effect Give Command Effect" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Status Effect"/>
+				<DetectChar attribute="Normal" context="#pop!Effect Give Command Duration" char=" "/>
+			</context>
+			<context name="Effect Give Command Duration" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<RegExpr attribute="Integer" context="Argument End" String="0*(?:1000000|\d{1,6})"/>
+				<DetectChar attribute="Normal" context="#pop!Effect Give Command Amplifier" char=" "/>
+			</context>
+			<context name="Effect Give Command Amplifier" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<RegExpr attribute="Integer" context="Argument End" String="0*(?:2(?:5[0-5]|[0-4]\d)|1?\d{1,2})"/>
+				<DetectChar attribute="Normal" context="#pop!Boolean at End" char=" "/>
+			</context>
+			<context name="Effect Clear Command Selector" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!Effect Clear Command Effect" char=" "/>
+			</context>
+			<context name="Effect Clear Command Effect" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Status Effect"/>
+				<DetectChar context="End" char=" "/>
+			</context>
+			
+			<context name="Advancement Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="Argument End" String="grant"/>
+				<WordDetect attribute="Normal" context="Argument End" String="revoke"/>
+				<DetectChar attribute="Normal" context="#pop!Advancement Command Selector" char=" "/>
+			</context>
+			<context name="Advancement Command Selector" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!Advancement Command Resource" char=" "/>
+			</context>
+			<context name="Advancement Command Resource" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<WordDetect attribute="Normal" context="End" String="everything"/>
+				<WordDetect attribute="Normal" context="Argument End" String="from"/>
+				<WordDetect attribute="Normal" context="Argument End" String="through"/>
+				<WordDetect attribute="Normal" context="Argument End" String="until"/>
+				<WordDetect attribute="Normal" context="Argument End" String="only"/>
+				<DetectChar attribute="Normal" context="#pop!Advancement Command Advancement" char=" "/>
+			</context>
+			<context name="Advancement Command Advancement" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Resource Location"/>
+				<DetectChar attribute="Normal" context="#pop!Text" char=" "/>
+			</context>
+			
+			<context name="Whisper Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!Text" char=" "/>
+			</context>
+			
+			<context name="Tellraw Command" attribute="Error" lineEndContext="#pop">
+				<IncludeRules context="Global"/>
+				<IncludeRules context="Entity Selector"/>
+				<DetectChar attribute="Normal" context="#pop!JSON Text" char=" "/>
+			</context>
+		</contexts>
+		<itemDatas>
+			<itemData name="Normal" defStyleNum="dsNormal"/>
+			<itemData name="Comment" defStyleNum="dsComment"/>
+			
+			<itemData name="String" defStyleNum="dsString"/>
+			<itemData name="Special Character" defStyleNum="dsSpecialChar"/>
+			<itemData name="Integer" defStyleNum="dsDecVal"/>
+			<itemData name="Float" defStyleNum="dsFloat"/>
+			<itemData name="Range" defStyleNum="dsFloat"/>
+			<itemData name="Direction" defStyleNum="dsDecVal"/>
+			<itemData name="True" defStyleNum="dsOther" color="#0F0" selColor="#0F0"/>
+			<itemData name="False" defStyleNum="dsOther" color="#F00" selColor="#F00"/>
+			<itemData name="Bracket" defStyleNum="dsPreprocessor" spellChecking="false"/>
+			<itemData name="Brace" defStyleNum="dsFunction" spellChecking="false"/>
+			<itemData name="List Separator" defStyleNum="dsPreprocessor"/>
+			
+			<itemData name="Command" defStyleNum="dsBuiltIn" spellChecking="false"/>
+			<itemData name="Execute Subcommand" defStyleNum="dsControlFlow" spellChecking="false"/>
+			<itemData name="Operator" defStyleNum="dsOperator"/>
+			<itemData name="Data Type" defStyleNum="dsDataType"/>
+			
+			<itemData name="X" defStyleNum="dsOther" color="#F00" selColor="#F00"/>
+			<itemData name="Y" defStyleNum="dsOther" color="#0F0" selColor="#0F0"/>
+			<itemData name="Z" defStyleNum="dsOther" color="#66F" selColor="#88F"/>
+			<itemData name="Coordinate" defStyleNum="dsOther" color="#0A0" selColor="#8C0"/>
+			<itemData name="Relative Coordinate" defStyleNum="dsOther" color="#0D0" selColor="#8C0"/>
+			<itemData name="Local Coordinate" defStyleNum="dsOther" color="#8C0" selColor="#8C0"/>
+			<itemData name="Entity Selector" defStyleNum="dsAttribute" spellChecking="false"/>
+			<itemData name="Entity Selector Argument" defStyleNum="dsVariable" spellChecking="false"/>
+			<itemData name="Tag" defStyleNum="dsOther" color="#F0F" selColor="#F0F" spellChecking="false"/>
+			<itemData name="Item" defStyleNum="dsOther" color="#0DF" selColor="#0DF" spellChecking="false"/>
+			<itemData name="Block" defStyleNum="dsOther" color="#0DF" selColor="#0DF" spellChecking="false"/>
+			<itemData name="Block State" defStyleNum="dsVariable" spellChecking="false"/>
+			<itemData name="Entity" defStyleNum="dsOther" color="#0DF" selColor="#0DF" spellChecking="false"/>
+			<itemData name="Status Effect" defStyleNum="dsOther" color="#0DF" selColor="#0DF" spellChecking="false"/>
+			<itemData name="Game Mode" defStyleNum="dsKeyword" spellChecking="false"/>
+			<itemData name="Game Rule" defStyleNum="dsOther" spellChecking="false"/>
+			
+			<itemData name="Namespace" defStyleNum="dsImport" spellChecking="false"/>
+			<itemData name="Path" defStyleNum="dsFunction" spellChecking="false"/>
+			
+			<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
+		</itemDatas>
+	</highlighting>
+	<general>
+		<comments>
+			<comment name="singleLine" start="#"/>
+		</comments>
+		<emptyLines>
+			<emptyLine regexpr="\s+"/>
+			<emptyLine regexpr="\s*#.*"/>
+		</emptyLines>
+	</general>
+</language>

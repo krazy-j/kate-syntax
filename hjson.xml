@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language name="Hjson" section="Markup" version="1" kateversion="5.0" extensions="*.hjson" mimetype="application/hjson">
+	<highlighting>
+		<list name="Constants">
+			<item>null</item>
+			<item>true</item>
+			<item>false</item>
+		</list>
+		
+		<contexts>
+			<context name="Normal" attribute="Error" fallthroughContext="Object" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="Object" char="{" beginRegion="Object"/>
+				<DetectChar attribute="Array" context="Array" char="[" beginRegion="Array"/>
+				
+				<IncludeRules context="Global"/>
+			</context>
+			
+			<context name="Global" lineEndContext="#stay">
+				<DetectChar context="Comment" char="#"/>
+				<StringDetect context="Comment" String="//"/>
+				<StringDetect context="Multiline Comment" String="/*"/>
+				
+				<DetectSpaces attribute="Normal"/>
+			</context>
+			
+			<context name="Comment" attribute="Comment" lineEndContext="#pop">
+			</context>
+			
+			<context name="Multiline Comment" attribute="Comment" lineEndContext="#stay">
+				<StringDetect attribute="Comment" context="#pop" String="*/"/>
+			</context>
+			
+			<context name="String Characters" lineEndContext="#stay">
+				<RegExpr attribute="String Character" String="\\[&quot;'\\/bfnrt]"/>
+				<RegExpr attribute="String Character" String="\\u[0-9a-fA-f]{4}"/>
+			</context>
+			
+			<context name="String" attribute="String" lineEndContext="#stay">
+				<IncludeRules context="String Characters"/>
+				<StringDetect attribute="String" context="#pop" String="%1" dynamic="true"/>
+			</context>
+			<context name="String as Value" attribute="String" lineEndContext="#stay">
+				<IncludeRules context="String Characters"/>
+				<StringDetect attribute="String" context="#pop!Next Member" String="%1" dynamic="true"/>
+			</context>
+			<context name="String as Item" attribute="String" lineEndContext="#stay">
+				<IncludeRules context="String Characters"/>
+				<StringDetect attribute="String" context="#pop!Next Item" String="%1" dynamic="true"/>
+			</context>
+			
+			<context name="Objects" attribute="Error" lineEndContext="#stay">
+				<RegExpr context="JSON Key" String="([&quot;'])"/>
+				<IncludeRules context="Global"/>
+				<RegExpr attribute="Key" context="Key End" String="[^#,:[\]{}\s]+"/>
+			</context>
+			
+			<context name="Object" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="#pop" char="}" endRegion="Object"/>
+				<IncludeRules context="Objects"/>
+			</context>
+			<context name="Object as Value" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="#pop!Next Member" char="}" endRegion="Object"/>
+				<IncludeRules context="Objects"/>
+			</context>
+			<context name="Object as Item" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="#pop!Next Item" char="}" endRegion="Object"/>
+				<IncludeRules context="Objects"/>
+			</context>
+			
+			<context name="JSON Key" attribute="Key" lineEndContext="#stay">
+				<StringDetect attribute="Key" context="#pop!Key End" String="%1" dynamic="true"/>
+				<IncludeRules context="String Characters"/>
+			</context>
+			
+			<context name="Key End" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="#pop!Value" char=":"/>
+				
+				<DetectSpaces attribute="Normal"/>
+			</context>
+			
+			<context name="Value" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="#pop!Object as Value" char="{" beginRegion="Object"/>
+				<DetectChar attribute="Array" context="#pop!Array as Value" char="[" beginRegion="Array"/>
+				
+				<keyword attribute="Constant" context="#pop!Next Member" String="Constants"/>
+				
+				<RegExpr attribute="Float" context="#pop!Next Member" String="-?(?:0|[1-9][0-9]*)\.[0-9]+(?:[eE][-+]?[0-9]+)?"/>
+				<RegExpr attribute="Decimal" context="#pop!Next Member" String="-?(?:0|[1-9][0-9]*)(?:[eE][-+]?[0-9]+)?"/>
+				
+				<RegExpr context="#pop!String as Value" String="(&quot;|'|''')"/>
+				<RegExpr attribute="String" context="#pop!Next Value" String="[^&quot;',:[\]{}\s](.*[^\s])?"/>
+				
+				<IncludeRules context="Global"/>
+			</context>
+			
+			<context name="Next Member" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Object" context="#pop" char=","/>
+				<DetectChar context="#pop" char="}" lookAhead="true"/>
+				
+				<IncludeRules context="Global"/>
+			</context>
+			
+			<context name="Arrays" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Object" context="Object as Item" char="{" beginRegion="Object"/>
+				<DetectChar attribute="Array" context="Array as Item" char="[" beginRegion="Array"/>
+				
+				<keyword attribute="Constant" context="Next Item" String="Constants"/>
+				
+				<RegExpr attribute="Float" context="Next Item" String="-?(?:0|[1-9][0-9]*)\.[0-9]+(?:[eE][-+]?[0-9]+)?"/>
+				<RegExpr attribute="Decimal" context="Next Item" String="-?(?:0|[1-9][0-9]*)(?:[eE][-+]?[0-9]+)?"/>
+				
+				<RegExpr context="String as Item" String="(&quot;|'|''')"/>
+				<IncludeRules context="Global"/>
+				<RegExpr attribute="String" context="Next Item" String="[^&quot;',:[\]{}\s](.*[^\s])?"/>
+			</context>
+			
+			<context name="Array" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Array" context="#pop" char="]" endRegion="Array"/>
+				<IncludeRules context="Arrays"/>
+			</context>
+			<context name="Array as Value" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Array" context="#pop!Next Member" char="]" endRegion="Array"/>
+				<IncludeRules context="Arrays"/>
+			</context>
+			<context name="Array as Item" attribute="Error" lineEndContext="#stay">
+				<DetectChar attribute="Array" context="#pop!Next Item" char="]" endRegion="Array"/>
+				<IncludeRules context="Arrays"/>
+			</context>
+			
+			<context name="Next Item" attribute="Error" lineEndContext="#pop">
+				<DetectChar attribute="Array" context="#pop" char=","/>
+				<DetectChar context="#pop" char="]" lookAhead="true"/>
+				
+				<IncludeRules context="Global"/>
+			</context>
+		</contexts>
+		
+		<itemDatas>
+			<itemData name="Normal" defStyleNum="dsNormal"/>
+			<itemData name="Comment" defStyleNum="dsComment"/>
+			
+			<itemData name="Object" defStyleNum="dsFunction" bold="true"/>
+			<itemData name="Array" defStyleNum="dsOthers" bold="true"/>
+			
+			<itemData name="Decimal" defStyleNum="dsDecVal"/>
+			<itemData name="Float" defStyleNum="dsFloat"/>
+			<itemData name="String" defStyleNum="dsString"/>
+			<itemData name="Key" defStyleNum="dsDataType"/>
+			<itemData name="String Character" defStyleNum="dsChar"/>
+			
+			<itemData name="Constant" defStyleNum="dsConstant"/>
+			
+			<itemData name="Error" defStyleNum="dsError"/>
+		</itemDatas>
+	</highlighting>
+	<general>
+		<comments>
+			<comment name="singleLine" start="#"/>
+			<comment name="multiLine" start="/*" end="*/" region="CommentFolding"/>
+		</comments>
+		<emptyLines>
+			<emptyLine regexpr="\s+"/>
+			<emptyLine regexpr="\s*#.*"/>
+		</emptyLines>
+	</general>
+</language>
