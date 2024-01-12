@@ -846,9 +846,8 @@
 				<keyword attribute="Status Effect" context="Argument End" String="status effect"/>
 			</context>
 			<context name="Status Effect Highlight" fallthroughContext="#pop!Argument End" lineEndContext="#pop">
-				<RegExpr attribute="Namespace" String="%1(?=:)" dynamic="true"/>
 				<DetectChar char=":"/>
-				<StringDetect attribute="Status Effect" context="#pop!Argument End" String="%2" dynamic="true"/>
+				<StringDetect attribute="Status Effect" context="#pop!Argument End" String="%1" dynamic="true"/>
 			</context>
 			
 			<context name="Position">
